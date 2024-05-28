@@ -1,13 +1,13 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    color: #333;
+body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
 }
 
 .container {
@@ -15,7 +15,7 @@ body {
     padding: 20px 40px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
 }
 
@@ -107,4 +107,12 @@ h1 {
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 5px;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.blurred {
+    color: #ccc;
 }

@@ -27,7 +27,12 @@ const blurText = (text) => {
 };
 
 const displayText = (text) => {
-    document.getElementById('article').innerText = text;
+    document.getElementById('article').innerHTML = text.split(' ').map(word => {
+        if (word === '______') {
+            return `<span class="blurred">${word}</span>`;
+        }
+        return word;
+    }).join(' ');
 };
 
 const updateGuessedWords = (word, count) => {
@@ -57,7 +62,7 @@ const makeGuess = () => {
     let wordCount = 0;
     for (let i = 0; i < originalWords.length; i++) {
         if (originalWords[i].toLowerCase() === guess && blurredWords[i] === '______') {
-            blurredWords[i] = originalWords[i];
+            blurredWords[i] = `<span class="highlight">${originalWords[i]}</span>`;
             correctGuess = true;
             wordCount++;
         }
