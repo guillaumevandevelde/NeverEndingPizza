@@ -9,15 +9,25 @@
             margin: 0;
             padding: 0;
             height: 100%;
+            width: 100%;
+            cursor: pointer; /* Voeg een cursor aan om aan te geven dat het klikbaar is */
         }
         body {
             background-image: url('catpizzaparty.webp');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
-<body>
+<body onclick="navigateToWiskwis()">
+    <script>
+        function navigateToWiskwis() {
+            window.location.href = '/WikiWisKwis/wiskwis.html';
+        }
+    </script>
 </body>
 </html>
